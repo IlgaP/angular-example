@@ -1,0 +1,65 @@
+.character {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+
+}
+
+.character-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status {
+  height: 15px;
+  width: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-flex;
+}
+
+.status-alive {
+  background-color: chartreuse;
+}
+
+.status-dead {
+  background-color: firebrick;
+}
+
+//Image
+
+.character-image-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.character-image {
+  border-radius: 50%;
+}
+
+// Buttons
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.back-btn {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    color: darkturquoise;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .character {
+      justify-content: center;
+    }
+  }
+}

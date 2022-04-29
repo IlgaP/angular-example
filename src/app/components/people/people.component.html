@@ -1,0 +1,19 @@
+<div *ngIf="peopleApiResponse$ | async as peopleApiResponse; else loader">
+  <app-people-table
+    [page]="currentPage"
+    [people]="peopleApiResponse.results"
+    [collectionSize]="peopleApiResponse.count"
+    (pageChangeEvent)="refreshPeople($event)">
+  </app-people-table>
+
+</div>
+
+<ng-template #loader>
+  <div class="container d-flex justify-content-center p-2">
+    <b>Loading Data...</b>
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+</ng-template>
